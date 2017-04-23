@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+
+{%- block content -%}
+  <h1>{{ translate("Ahoj svet!") }}</h1>
+  <a href="{{ url_for('multilang.index') }}">{{ translate("Hlavná stránka") }}</a>
+{%- endblock -%}

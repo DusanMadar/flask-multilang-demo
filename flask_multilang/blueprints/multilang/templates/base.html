@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{ g.lang }}">
+  <head>
+    <meta charset="utf-8">
+    <title>Flask multilang</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous">
+    </script>
+    {# Note we are using '.static' to use the Blueprint's 'static' folder #}
+     <script src="{{ url_for('.static', filename='js/set-language.js') }}"></script>
+  </head>
+  <body>
+    <nav>
+      {% if g.lang in config['LOCALE_SUPPORTED'] %}
+      <div id="lang-selector">
+        {% if g.lang == 'sk' %}
+        <strong>Slovenčina</strong>
+        {% else %}
+        <a href="#sk">Slovenčina</a>
+        {% endif%}
+        |
+        {% if g.lang == 'en' %}
+        <strong>English</strong>
+        {% else %}
+        <a href="#en">English</a>
+        {% endif%}
+      </div>
+      {% endif%}
+    </nav>
+
+    {%- block content -%}
+    {%- endblock -%}
+  </body>
+</html>
