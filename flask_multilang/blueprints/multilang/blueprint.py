@@ -7,8 +7,8 @@ from flask_multilang.messages import translate_message
 class Multilang(object):
     def __init__(self):
         self.blueprint = Blueprint(
-            'multilang',
-            __name__,
+            name='multilang',
+            import_name=__name__,
             url_prefix='/<lang>',
             template_folder='templates',
             static_folder='static'
