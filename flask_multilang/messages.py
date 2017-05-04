@@ -3,6 +3,8 @@ import os
 
 from flask import g, request
 
+from config import ENGLISH
+
 
 current_dir = os.path.dirname(__file__)
 messages_json = os.path.join(current_dir, 'data/messages.json')
@@ -13,7 +15,7 @@ with open(messages_json, encoding='utf-8', mode='r') as f:
 
 
 def get_translation(message, lang):
-    if lang == 'sk':
+    if lang == ENGLISH:
         return message
 
     return messages[message][lang]

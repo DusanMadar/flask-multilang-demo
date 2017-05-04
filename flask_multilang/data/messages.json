@@ -1,11 +1,11 @@
 {
-  "Ahoj svet!": {
-    "en": "Hello world!"
+  "Hello world!": {
+    "sk": "Ahoj svet!"
   },
-  "Hlavná stránka": {
-    "en": "Main page"
+  "Main page": {
+    "sk": "Hlavná stránka"
   },
-  "Vitajte": {
-    "en": "Welcome"
+  "Welcome": {
+    "sk": "Vitajte"
   }
 }

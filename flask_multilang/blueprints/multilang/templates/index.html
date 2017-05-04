@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
 {%- block content -%}
-  <h1>{{ translate("Vitajte") }}</h1>
-  <a href="{{url_for('multilang.hello_world_' + g.lang )}}">{{ translate("Ahoj svet!") }}</a>
+  <h1>{{ translate("Welcome") }}</h1>
+  <a href="{{url_for('multilang.hello_world_' + g.lang )}}">{{ translate("Hello world!") }}</a>
 {%- endblock -%}
