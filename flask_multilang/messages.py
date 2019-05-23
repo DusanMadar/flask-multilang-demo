@@ -7,7 +7,7 @@ from config import ENGLISH
 
 
 current_dir = os.path.dirname(__file__)
-messages_json = os.path.join(current_dir, 'data/messages.json')
+messages_json = os.path.join(current_dir, 'data', 'messages.json')
 
 
 with open(messages_json, encoding='utf-8', mode='r') as f:
